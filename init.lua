@@ -629,7 +629,12 @@ require('lazy').setup({
         gopls = {},
         html = {},
         denols = {},
-        ts_ls = {},
+        ts_ls = {
+          filetypes = {
+            'jsx',
+            'tsx',
+          },
+        },
         jsonls = {},
         marksman = {},
         glsl_analyzer = {},
@@ -661,7 +666,7 @@ require('lazy').setup({
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
@@ -962,6 +967,7 @@ require('lazy').setup({
         'swift',
         'toml',
         'typescript',
+        'tsx',
         'vim',
         'vimdoc',
         'xml',
