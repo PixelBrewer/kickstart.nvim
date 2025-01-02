@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -616,10 +616,32 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+        angularls = {},
+        bashls = {},
+        csharp_ls = {},
+        clangd = {},
+        cmake = {},
+        cssls = {},
+        css_variables = {},
+        tailwindcss = {},
+        dockerls = {},
+        emmet_ls = {},
+        gopls = {},
+        html = {},
+        denols = {},
+        ts_ls = {},
+        jsonls = {},
+        marksman = {},
+        glsl_analyzer = {},
+        phpactor = {},
+        powershell_es = {},
+        prismals = {},
+        pyright = {},
+        rust_analyzer = {},
+        sqlls = {},
+        svelte = {},
+        yamlls = {},
+        zls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -899,7 +921,53 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'angular',
+        'bash',
+        'c',
+        'c_sharp',
+        'cmake',
+        'comment',
+        'cpp',
+        'css',
+        'diff',
+        'dockerfile',
+        'editorconfig',
+        'git_config',
+        'git_rebase',
+        'gitattributes',
+        'gitcommit',
+        'gitignore',
+        'glsl',
+        'go',
+        'html',
+        'http',
+        'java',
+        'javascript',
+        'json',
+        'lua',
+        'luadoc',
+        'make',
+        'markdown_inline',
+        'php',
+        'powershell',
+        'prisma',
+        'python',
+        'query',
+        'regex',
+        'rust',
+        'scss',
+        'sql',
+        'svelte',
+        'swift',
+        'toml',
+        'typescript',
+        'vim',
+        'vimdoc',
+        'xml',
+        'yaml',
+        'zig',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
